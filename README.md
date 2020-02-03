@@ -32,3 +32,6 @@ Evaluator compares the performance of different recommender algorithms against e
 #### 0.6 RecsBakeOff
 RecsBakeOff is the main class to run the other class of the Recommender Engine.
 
+
+## 1. Content-Based Filtering
+on-working
