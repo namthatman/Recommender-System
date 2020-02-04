@@ -7,6 +7,8 @@ The architecture of the Recommender Engine building on top of surpriselib.
 #### 0.1 EvaluatedAlgorithm(AlgoBase)
 EvaluatedAlgorithm contains an algorithm from surpriselib, but introduces a new function called Evaluate that runs all of the metrics in RecommenderMetrics on that algorithm.
 
+    AlgoBase:   SVD, KNNBasic, SVDpp, Custom
+
 #### 0.2 RecommenderMetrics
 RecommenderMetrics contains evaluating functions to measure:
 
