@@ -50,6 +50,19 @@ Measuring the content-based similarity scores between this movie and all others 
     Algorithm  RMSE       MAE       
     ContentKNN 0.9375     0.7263    
     Random     1.4385     1.1478 
+    
+    Using recommender  ContentKNN:                                      Using recommender  Random
+    We recommend:                                                       We recommend:
+    Presidio, The (1988) 3.841314676872932                              Sleepers (1996) 5
+    Femme Nikita, La (Nikita) (1990) 3.839613347087336                  Beavis and Butt-Head Do America (1996) 5
+    Wyatt Earp (1994) 3.8125061475551796                                Fear and Loathing in Las Vegas (1998) 5
+    Shooter, The (1997) 3.8125061475551796                              Happiness (1998) 5
+    Bad Girls (1994) 3.8125061475551796                                 Summer of Sam (1999) 5
+    The Hateful Eight (2015) 3.812506147555179                          Bowling for Columbine (2002) 5
+    True Grit (2010) 3.812506147555179                                  Babe (1995) 5
+    Open Range (2003) 3.812506147555179                                 Birdcage, The (1996) 5
+    Big Easy, The (1987) 3.7835412549266985                             Carlito's Way (1993) 5
+    Point Break (1991) 3.764158410102279                                Wizard of Oz, The (1939) 5
 
 ##
 ## 2. Neighborhood-Based Collaborative Filtering (on-working)
