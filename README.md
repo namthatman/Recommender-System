@@ -34,6 +34,7 @@ Evaluator compares the performance of different recommender algorithms against e
 #### 0.6 RecsBakeOff
 RecsBakeOff is the main class to run the other class of the Recommender Engine.
 
+    Sample result:
     Algorithm  RMSE       MAE        HR         cHR        ARHR       Coverage   Diversity  Novelty   
     SVD        0.9034     0.6978     0.0298     0.0298     0.0112     0.9553     0.0445     491.5768  
     Random     1.4385     1.1478     0.0089     0.0089     0.0015     1.0000     0.0719     557.8365  
@@ -47,6 +48,7 @@ The most simple approach, recommending items based on the attributes of those it
 #### 1.1 K-Nearest-Neighbors
 Measuring the content-based similarity scores between this movie and all others the user rated -> Select/Sort some number, K of the nearest-neighbors to the movie -> Top K nearest movies -> Take the weighted average of similarity scores weighting by the rating the user gave -> Rating prediction.
 
+    Sample result:
     Algorithm  RMSE       MAE       
     ContentKNN 0.9375     0.7263    
     Random     1.4385     1.1478 
