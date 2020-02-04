@@ -34,6 +34,10 @@ Evaluator compares the performance of different recommender algorithms against e
 #### 0.6 RecsBakeOff
 RecsBakeOff is the main class to run the other class of the Recommender Engine.
 
+    Algorithm  RMSE       MAE        HR         cHR        ARHR       Coverage   Diversity  Novelty   
+    SVD        0.9034     0.6978     0.0298     0.0298     0.0112     0.9553     0.0445     491.5768  
+    Random     1.4385     1.1478     0.0089     0.0089     0.0015     1.0000     0.0719     557.8365  
+
 ##
 ## 1. Content-Based Filtering
 The most simple approach, recommending items based on the attributes of those items themselves instead of trying to use aggregate user behavior data. For example, recommend movies in the same genre, has the same actors or directors, etc.
