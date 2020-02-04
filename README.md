@@ -47,5 +47,9 @@ The most simple approach, recommending items based on the attributes of those it
 #### 1.1 K-Nearest-Neighbors
 Measuring the content-based similarity scores between this movie and all others the user rated -> Select/Sort some number, K of the nearest-neighbors to the movie -> Top K nearest movies -> Take the weighted average of similarity scores weighting by the rating the user gave -> Rating prediction.
 
+    Algorithm  RMSE       MAE       
+    ContentKNN 0.9375     0.7263    
+    Random     1.4385     1.1478 
+
 ##
 ## 2. Neighborhood-Based Collaborative Filtering (on-working)
