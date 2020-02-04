@@ -51,7 +51,7 @@ Measuring the content-based similarity scores between this movie and all others 
     ContentKNN 0.9375     0.7263    
     Random     1.4385     1.1478 
     
-    Using recommender  ContentKNN:                                      Using recommender  Random
+    Using recommender  ContentKNN                                       Using recommender  Random
     We recommend:                                                       We recommend:
     Presidio, The (1988) 3.841314676872932                              Sleepers (1996) 5
     Femme Nikita, La (Nikita) (1990) 3.839613347087336                  Beavis and Butt-Head Do America (1996) 5
