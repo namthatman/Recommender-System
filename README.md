@@ -34,7 +34,7 @@ Evaluator compares the performance of different recommender algorithms against e
 #### 0.6 RecsBakeOff
 RecsBakeOff is the main class to run the other class of the Recommender Engine.
 
-
+##
 ## 1. Content-Based Filtering
 The most simple approach, recommending items based on the attributes of those items themselves instead of trying to use aggregate user behavior data. For example, recommend movies in the same genre, has the same actors or directors, etc.
 
@@ -43,5 +43,5 @@ The most simple approach, recommending items based on the attributes of those it
 #### 1.1 K-Nearest-Neighbors
 Measuring the content-based similarity scores between this movie and all others the user rated -> Select/Sort some number, K of the nearest-neighbors to the movie -> Top K nearest movies -> Take the weighted average of similarity scores weighting by the rating the user gave -> Rating prediction.
 
-
+##
 ## 2. Neighborhood-Based Collaborative Filtering (on-working)
