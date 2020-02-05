@@ -75,11 +75,62 @@ This is the idea of leveraging the behavior of the others to inform what you mig
 #### 2.1 User-Based Collaborative Filtering
 Start by finding other users similar to yourself, based on their ratings history, and recommend stuff they liked that you haven't seen yet. Steps: user-item rating matrix -> user-user similarity matrix -> look up top similar users -> candidate generation -> candidate scoring -> candidate filtering.
 
-#### 2.2 User-Based KNN Recommender
-Find the K most-similar users who rated this item -> compute mean similarity score weighted by ratings -> rating prediction.
+    Sample result:
+    testSubject = '85'
+    We recommend:
+    Inception (2010) 3.3
+    Star Wars: Episode V - The Empire Strikes Back (1980) 2.4
+    Bourne Identity, The (1988) 2.0
+    Crouching Tiger, Hidden Dragon (Wo hu cang long) (2000) 2.0
+    Dark Knight, The (2008) 2.0
+    Good, the Bad and the Ugly, The (Buono, il brutto, il cattivo, Il) (1966) 1.9
+    Departed, The (2006) 1.9
+    Dark Knight Rises, The (2012) 1.9
+    Back to the Future (1985) 1.9
+    Gravity (2013) 1.8
+    Fight Club (1999) 1.8
 
-#### 2.3 Item-Based Collaborative Filtering
+#### 2.2 Item-Based Collaborative Filtering
 Instead of looking for other people similar to you, look at the things you liked and recommend stuff that's similar to those things. Using similarities between items could be better than similarities between people, items tend to be of a more permanent nature than people whose tastes may change quickly.  
+
+    Sample result:
+    testSubject = '85'
+    We recommend:
+    James Dean Story, The (1957) 10.0
+    Get Real (1998) 9.987241120712646
+    Kiss of Death (1995) 9.966881877751941
+    Set It Off (1996) 9.963732215657119
+    How Green Was My Valley (1941) 9.943984081065269
+    Amos & Andrew (1993) 9.93973694500253
+    My Crazy Life (Mi vida loca) (1993) 9.938290487546041
+    Grace of My Heart (1996) 9.926255896645218
+    Fanny and Alexander (Fanny och Alexander) (1982) 9.925699671455906
+    Wild Reeds (Les roseaux sauvages) (1994) 9.916226404418774
+    Edge of Seventeen (1998) 9.913028764691676
+
+#### 2.3 User-Based KNN Recommender
+Find the K most-similar users who rated this item -> compute mean similarity score weighted by ratings -> rating prediction.
 
 #### 2.4 Item-Based KNN Recommender
 Find the K most-similar items also rated by this user -> compute mean similarity score weighted by ratings -> rating prediction.
+
+    Algorithm  RMSE       MAE       
+    User KNN   0.9961     0.7711    
+    Item KNN   0.9995     0.7798    
+    Random     1.4385     1.1478   
+
+    Using recommender  User KNN                                 Using recommender  Item KNN                                 Using recommender  Random                                     
+    We recommend:                                               We recommend:                                               We recommend:
+    One Magic Christmas (1985) 5                                Life in a Day (2011) 5                                      Sleepers (1996) 5
+    Step Into Liquid (2002) 5                                   Under Suspicion (2000) 5                                    Beavis and Butt-Head Do America (1996) 5
+    Art of War, The (2000) 5                                    Asterix and the Gauls (AstÃ©rix le Gaulois) (1967) 5        Fear and Loathing in Las Vegas (1998) 5
+    Taste of Cherry (Ta'm e guilass) (1997) 5                   Find Me Guilty (2006) 5                                     Happiness (1998) 5
+    King Is Alive, The (2000) 5                                 Elementary Particles, The (Elementarteilchen) (2006) 5      Summer of Sam (1999) 5
+    Innocence (2000) 5                                          Asterix and the Vikings (AstÃ©rix et les Vikings) (2006) 5  Bowling for Columbine (2002) 5
+    MaelstrÃ¶m (2000) 5                                         From the Sky Down (2011) 5                                  Babe (1995) 5
+    Faust (1926) 5                                              Vive L'Amour (Ai qing wan sui) (1994) 5                     Birdcage, The (1996) 5
+    Seconds (1966) 5                                            Vagabond (Sans toit ni loi) (1985) 5                        Carlito's Way (1993) 5
+    Amazing Grace (2006) 5                                      Ariel (1988) 5                                              Wizard of Oz, The (1939) 5
+
+
+
