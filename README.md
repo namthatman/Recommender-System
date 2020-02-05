@@ -114,6 +114,7 @@ Find the K most-similar users who rated this item -> compute mean similarity sco
 #### 2.4 Item-Based KNN Recommender
 Find the K most-similar items also rated by this user -> compute mean similarity score weighted by ratings -> rating prediction.
 
+    Sample result:
     Algorithm  RMSE       MAE       
     User KNN   0.9961     0.7711    
     Item KNN   0.9995     0.7798    
