@@ -75,7 +75,11 @@ This is the idea of leveraging the behavior of the others to inform what you mig
 #### 2.1 User-Based Collaborative Filtering
 Start by finding other users similar to yourself, based on their ratings history, and recommend stuff they liked that you haven't seen yet. Steps: user-item rating matrix -> user-user similarity matrix -> look up top similar users -> candidate generation -> candidate scoring -> candidate filtering.
 
-#### 2.2 Item-Based Collaborative Filtering
+#### 2.2 User-Based KNN Recommender
+Find the K most-similar users who rated this item -> compute mean similarity score weighted by ratings -> rating prediction.
+
+#### 2.3 Item-Based Collaborative Filtering
 Instead of looking for other people similar to you, look at the things you liked and recommend stuff that's similar to those things. Using similarities between items could be better than similarities between people, items tend to be of a more permanent nature than people whose tastes may change quickly.  
 
-
+#### 2.4 Item-Based KNN Recommender
+Find the K most-similar items also rated by this user -> compute mean similarity score weighted by ratings -> rating prediction.
