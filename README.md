@@ -67,4 +67,15 @@ Measuring the content-based similarity scores between this movie and all others 
     Point Break (1991) 3.764158410102279                                Wizard of Oz, The (1939) 5
 
 ##
-## 2. Neighborhood-Based Collaborative Filtering (on-working)
+## 2. Neighborhood-Based Collaborative Filtering
+This is the idea of leveraging the behavior of the others to inform what you might enjoy. At the very high level, it means finding other people like you and recommending stuff they liked. Or it might mean finding other things similar to the thing that you like. That is, recommending stuff people bought who also bought the stuff that you liked. Recommending stuff based on other people's collaborative behavior.
+
+    Neighborhood-Based Similarity:   Cosine, Adjusted Cosine, Pearson Similarity, Mean Squared Differencce, Jaccard Similarity, Spearman Rank Correlation.
+    
+#### 2.1 User-Based Collaborative Filtering
+Start by finding other users similar to yourself, based on their ratings history, and recommend stuff they liked that you haven't seen yet. Steps: user-item rating matrix -> user-user similarity matrix -> look up top similar users -> candidate generation -> candidate scoring -> candidate filtering.
+
+#### 2.2 Item-Based Collaborative Filtering
+Instead of looking for other people similar to you, look at the things you liked and recommend stuff that's similar to those things. Using similarities between items could be better than similarities between people, items tend to be of a more permanent nature than people whose tastes may change quickly.  
+
+
