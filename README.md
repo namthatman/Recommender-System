@@ -133,5 +133,6 @@ Find the K most-similar items also rated by this user -> compute mean similarity
     Seconds (1966) 5                                            Vagabond (Sans toit ni loi) (1985) 5                        Carlito's Way (1993) 5
     Amazing Grace (2006) 5                                      Ariel (1988) 5                                              Wizard of Oz, The (1939) 5
 
-
+##
+## 3. Matrix Factorization Methods (on-working)
 
