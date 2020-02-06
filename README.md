@@ -134,5 +134,39 @@ Find the K most-similar items also rated by this user -> compute mean similarity
     Amazing Grace (2006) 5                                      Ariel (1988) 5                                              Wizard of Oz, The (1939) 5
 
 ##
-## 3. Matrix Factorization Methods (on-working)
+## 3. Matrix Factorization Methods
+Model-Based methods, since instead of trying to find items or users that are similar to each other, we'll instead apply data science and machine learning techniques to extract predictions from our ratings data. We will train models with user rating data and use those models to predict the ratings of new items by users.
+
+Matrix Factorization algorithms manage to find broader features of users and items on their own, like action movies or romantic. Although the math doesn't know what to call them, they are just described by matrices that describe whatever attributes fall out of the data. The general idea is to describe users and movies as combinations of different amounts of each feature.
+
+#### 3.1 Principal Component Analysis (PCA)
+PCA, as a dimensionality reduction problem, that is, we want to take data that exists in many dimensions, like all of the movies a user might rate, into a smaller set of dimensions that can accurately describe a movie, such as its genres.
+
+#### 3.2 Singular Value Decomposition (SVD)
+SVD is a way to computing Matrix Factorization at once very efficiently. SVD runs PCA on both the users and the items, and gives back the matrices we need that are factors of the ratings matrix we want.
+
+    Sample result:
+    Algorithm  RMSE       MAE       
+    SVD        0.9039     0.6984    
+    SVD++      0.8943     0.6887    
+    Random     1.4359     1.1493    
+    
+    Using recommender  SVD                                      Using recommender  SVD++                                    Using recommender  Random                                     
+    We recommend:                                               We recommend:                                               We recommend:
+    Gladiator (1992) 4.520884890007874                          Lock, Stock & Two Smoking Barrels (1998) 4.6042276662762    Usual Suspects, The (1995) 5
+    Philadelphia Story, The (1940) 4.420701711947352            The Imitation Game (2014) 4.457817607681913                 Legends of the Fall (1994) 5
+    Stand by Me (1986) 4.3959589752178365                       Amadeus (1984) 4.322529285260794                            Trainspotting (1996) 5
+    Moon (2009) 4.372613693384055                               Indiana Jones and the Last Crusade (1989) 4.289355864317    Titanic (1997) 5
+    Happiness (1998) 4.369493252705134                          Happiness (1998) 4.260333724293291                          Happiness (1998) 5
+    American Graffiti (1973) 4.353470600109924                  Harry Potter and the Sorcerer's Stone (2001) 4.229511982    Big Daddy (1999) 5
+    And Your Mother Too (Y tu mamÃ¡ tambiÃ©n) (2001) 4.34915    Wings of Desire (Himmel Ã¼ber Berlin, Der) (1987) 4.2242    Spider-Man 2 (2004) 5
+    Wallace & Gromit: A Close Shave (1995) 4.315441215430408    Grand Day Out with Wallace and Gromit, A (1989) 4.223352    Blade Runner (1982) 5
+    Band of Brothers (2001) 4.315414828016616                   Charade (1963) 4.208953110263677                            Stand by Me (1986) 5
+    Seven Samurai (Shichinin no samurai) (1954) 4.3111029206    Snatch (2000) 4.204477673848874                             Indiana Jones and the Last Crusade (1989) 5
+
+##
+## 4. Deep Learning for Recommender Systems (on-working)
+
+
+
 
