@@ -217,7 +217,10 @@ The architecture of GRU4Rec:
     
 represents the processing of a single event in the clickstream. We start with the item that was just viewed encoded as 1-of-N, and that goes into an embedding layer, and that in turn leads into multiple GRU layers then multiple feedforward layers. And finally we get scores on the all of the items, from which we can select the items the deep network thinks is most likely to be viewed next in the clickstream.
 
+    Sample result:
+    Recall@20: 0.11595807746943615  MRR@20: 0.029791653819438553
 
+Unfortunately, the ouput isn't terribly interesting because it would be hard to subjectively evaluate the results given that we are using a dataset that wasn't really intended for this to begin with. More information on ICLR'2016 paper "Session-based Recommendations With Recurrent Neural Networks". See paper: http://arxiv.org/abs/1511.06939.
 
 
 
