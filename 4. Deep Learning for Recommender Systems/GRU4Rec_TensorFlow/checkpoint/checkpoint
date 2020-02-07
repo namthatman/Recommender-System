@@ -1,0 +1,4 @@
+model_checkpoint_path: "gru-model-2"
+all_model_checkpoint_paths: "gru-model-0"
+all_model_checkpoint_paths: "gru-model-1"
+all_model_checkpoint_paths: "gru-model-2"
