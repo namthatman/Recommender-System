@@ -165,7 +165,17 @@ SVD is a way to computing Matrix Factorization at once very efficiently. SVD run
     Seven Samurai (Shichinin no samurai) (1954) 4.3111029206    Snatch (2000) 4.204477673848874                             Indiana Jones and the Last Crusade (1989) 5
 
 ##
-## 4. Deep Learning for Recommender Systems (on-working)
+## 4. Deep Learning for Recommender Systems
+Deep Learning can be very good at recognizing patterns at a way similar to how human brain may do it. It's good at things like image recognition and predicting sequences of events. Thus, you can think of recommender systems as looking for very complex patterns based on the behavior of the other people. So, Matrix Factorization can be modeled as a neural network.
+
+#### 4.1 Restricted Boltzmann Machines (RBMs)
+The general idea is to use each individual user in our training data as a set of inputs into RBM to train it. Process each user as part of a batch during training, looking at their ratings for every movie they rated. Visible nodes represent ratings for a given user on every movie, and we are trying to learn weights and biases to reconstruct ratings for user-movie pairs we don't know yet. As we are training our RBM with a given user's known ratings, we attempt to learn the weights and biases used for the movies that user actually rated. As we iterate through training on all of the other users, we fill in the other weights and biases as we go.
+
+#### 4.2 Auto-Encoders for Recommendations (Autorec)
+Autorec has three layers: an input layer that contains individual ratings, a hidden layer, and an output layer that gives us our predictions. A matrix of weights between the layers is maintained across every instance of this network, as well as a bias node for both hidden and output layers.
+
+
+
 
 
 
