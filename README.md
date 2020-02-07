@@ -192,7 +192,12 @@ The general idea is to use each individual user in our training data as a set of
 #### 4.2 Auto-Encoders for Recommendations (Autorec)
 Autorec has three layers: an input layer that contains individual ratings, a hidden layer, and an output layer that gives us our predictions. A matrix of weights between the layers is maintained across every instance of this network, as well as a bias node for both hidden and output layers.
 
-
+#### 4.3 Session-Based Recommendations with RNNs (GRU4Rec)
+The architecture of GRU4Rec: 
+    
+    input layer (one-hot encoded item) -> embedding layer -> gru layers -> feedforward layers -> output scores on items
+    
+represents the processing of a single event in the clickstream. We start with the item that was just viewed encoded as 1-of-N, and that goes into an embedding layer, and that in turn leads into multiple GRU layers then multiple feedforward layers. And finally we get scores on the all of the items, from which we can select the items the deep network thinks is most likely to be viewed next in the clickstream.
 
 
 
