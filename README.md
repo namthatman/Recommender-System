@@ -171,6 +171,24 @@ Deep Learning can be very good at recognizing patterns at a way similar to how h
 #### 4.1 Restricted Boltzmann Machines (RBMs)
 The general idea is to use each individual user in our training data as a set of inputs into RBM to train it. Process each user as part of a batch during training, looking at their ratings for every movie they rated. Visible nodes represent ratings for a given user on every movie, and we are trying to learn weights and biases to reconstruct ratings for user-movie pairs we don't know yet. As we are training our RBM with a given user's known ratings, we attempt to learn the weights and biases used for the movies that user actually rated. As we iterate through training on all of the other users, we fill in the other weights and biases as we go.
 
+    Sample result (before tuning):
+    Algorithm  RMSE       MAE        HR         cHR        ARHR       Coverage   Diversity  Novelty   
+    RBM        1.3257     1.1337     0.0000     0.0000     0.0000     0.0000     0.7423     4551.7024 
+    Random     1.4366     1.1468     0.0149     0.0149     0.0041     1.0000     0.0721     552.4610  
+    
+    Using recommender  RBM                                                          Using recommender  Random
+    We recommend:                                                                   We recommend:
+    Guardian, The (1990) 2.7926018                                                  Beavis and Butt-Head Do America (1996) 5
+    The Boy (2016) 2.788903                                                         Gods Must Be Crazy, The (1980) 5
+    Super, The (1991) 2.7884843                                                     Seven (a.k.a. Se7en) (1995) 5
+    Christmas Vacation (National Lampoon's Christmas Vacation) (1989) 2.7860935     Reality Bites (1994) 5
+    Bright Eyes (1934) 2.784541                                                     Young Guns (1988) 5
+    Vicky Cristina Barcelona (2008) 2.7843983                                       Fear and Loathing in Las Vegas (1998) 5
+    That's My Boy (2012) 2.7839901                                                  Pet Sematary (1989) 5
+    Troy (2004) 2.783449                                                            Ghostbusters (a.k.a. Ghost Busters) (1984) 5
+    Dear White People (2014) 2.7833507                                              Requiem for a Dream (2000) 5
+    Stargate: The Ark of Truth (2008) 2.7827556                                     Herbie Rides Again (1974) 5
+
 #### 4.2 Auto-Encoders for Recommendations (Autorec)
 Autorec has three layers: an input layer that contains individual ratings, a hidden layer, and an output layer that gives us our predictions. A matrix of weights between the layers is maintained across every instance of this network, as well as a bias node for both hidden and output layers.
 
