@@ -192,6 +192,24 @@ The general idea is to use each individual user in our training data as a set of
 #### 4.2 Auto-Encoders for Recommendations (Autorec)
 Autorec has three layers: an input layer that contains individual ratings, a hidden layer, and an output layer that gives us our predictions. A matrix of weights between the layers is maintained across every instance of this network, as well as a bias node for both hidden and output layers.
 
+    Sample result (before tuning):
+    Algorithm  RMSE       MAE        HR         cHR        ARHR       Coverage   Diversity  Novelty   
+    AutoRec    1.8253     1.4222     0.0075     0.0075     0.0026     1.0000     0.0713     512.4595 
+    Random     1.4366     1.1468     0.0149     0.0149     0.0041     1.0000     0.0721     552.4610  
+    
+    Using recommender  RBM                                                          Using recommender  Random
+    We recommend:                                                                   We recommend:
+    Deer Hunter, The (1978) 5                                                       Beavis and Butt-Head Do America (1996) 5
+    Seven (a.k.a. Se7en) (1995) 5                                                   Gods Must Be Crazy, The (1980) 5
+    Circle of Friends (1995) 5                                                      Seven (a.k.a. Se7en) (1995) 5
+    Raiders of the Lost Ark (Indiana Jones & the Raiders of the Lost Ark) (1981) 5  Reality Bites (1994) 5
+    Rocketeer, The (1991) 5                                                         Young Guns (1988) 5
+    Arachnophobia (1990) 5                                                          Fear and Loathing in Las Vegas (1998) 5
+    Hero (Ying xiong) (2002) 5                                                      Pet Sematary (1989) 5
+    Rob Roy (1995) 5                                                                Ghostbusters (a.k.a. Ghost Busters) (1984) 5
+    Thin Red Line, The (1998) 5                                                     Requiem for a Dream (2000) 5
+    October Sky (1999) 5                                                            Herbie Rides Again (1974) 5
+
 #### 4.3 Session-Based Recommendations with RNNs (GRU4Rec)
 The architecture of GRU4Rec: 
     
