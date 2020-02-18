@@ -258,9 +258,29 @@ Things you might stoplist
     
 Stoplists should be updated and applied quickly should the need arise.
 
-#### 5.3 Filter Bubbles Trust and Outliers
+#### 5.3 Filter Bubbles Trust
 Filter Bubbles refers to societal problems that arise when all you show people are things that appeal to their existing interests. This is called a filter bubble because the content you're presenting your users is filtered in such a way that it keeps them within a bubble of their pre-existing interests. Transparency, allow the user to see exactly why you recommended this item to them, and ideally, let them fix the root cause themselves. It's a much better outcome if a user understands why you recommended something that they found confusing.
 
+#### 5.4 Outliers
 Outliers, some users in your data aren't actually real people, but are bots that are rating things in an unnatural manner. A bot might also generate an exessively large number of ratings, and end up having a very large influence on you collaborative filtering recommendations. Even among real peopel, you might want to filter some of them out, i.e. professional reviewers, institutional buyers, who can have a huge influence on your recommendations.
 
+#### 5.5 Gaming The System
+Another real-world problem is people trying to game your system. If items your recommender system promotes leads to those items being purchased more, the makers of those items have a financial incentive to find ways to game your system into recommending their items more often. Or people with certain ideological agendas might purposelt try to make your ssytem recommend items that promote their own ideology, or to not recommend items that run counter to it. Some hacker might even be bored, and try to create humorous pairings in your recommender system just for their own amusement.
 
+One techique that works remarkably well for this problem, make sure that recommendations are only generated from people who actually spent real money on the item. Or make sure that you only allow reviews from people you know actually purchased or cunsumed the content in question.
+
+#### 5.6 Fraud The Perils of Clickstream
+Using implicit clickstream data, such as images people click on, is fraught with problems. You should always be extremly skeptical about building a recommender system that relies only on things people click on, such as ads. Not only are these sorts of systems highly susceptible to gaming, they are susceptible to quirks of human behavior that aren't useful for recommendations. Clickstream data is a very unreliable signal of interest. What people click on and what they buy can be very diffent things.
+
+#### 5.7 International Markets and Laws
+If your recommender system spans customers in different countries, there may be specific challenges that you need to consider. International customer data when training a recommender system, in most cases, should be kept separated by country. Since you don't want to recommend items in a foreign language to people who don't speak that language, and there may be cultural differences that influence peoples' tastes in different countries.
+
+There is also the problem of availability and content restrictions. Some countries have legal restrictions on what sort of content can be consumed as well, which must be taken into consideration. Since your recommender system depends on collectiong data on individual interest, there are also privacy laws to take into consideration, and these too vary by country.
+
+#### 5.8 Temporal Effects
+Dealing with the effects of time, one example is seasonality, some items, like Christmas decorations, only make for good recommendations just before Christmas. Or recommending bikinis in the winter is also a bad idea. Picking up on annual patterns like this is hard to do, and most recommender systems won't do it automatically. But, something you can do more easily and more generally is taking the recency of a rating into account. As peoples' tastes change quickly, and a rating a user made yesterday is much stronger indication of their interest than a rating they made a year ago. The product a user is looking at right now is the most powerful indicator of their current interest. It makes sense to use rating recency as a training feature of its own.
+
+#### 5.9 Value-Aware Recommendations
+In the real world, a recommender system you're building for a company will ultimately exist for the purpose of driving their profit. In the real world, some items are more profitable than others. Some items might even be offered at below cost as loss leaders to attract people to your site, and recommending them actually costs your company money. This presents a bit of a moral quandary for the recommender system developers. Do we keep our algorithms pure and optimize only for users' interests, or do we work profit into the equation by rewarding algorithms that generate more profit? This is value-aware recommendations, where the contribution to the company's bottom line plays a role in whether something is recommended.
+
+Optimizing too much for profit can backfire. You don't want to end up only recommending expensive items to yor customers, because they will be less likely to purchase them. It might make more sense to look at profit margin, and not actual profit, so the cost of the item isn't really a factor in what you recommend.
