@@ -229,17 +229,17 @@ The Cold Start Problem is as when a brand-new user arrives at your site, what do
 
 Cold-Start: new user solutions:
 
-    use implicit data: a new user's interests can be indicated as soon as they looks at an item on your site, you'll have at least some implicit information about this user's interests.
-    use cookies (carefully): a new user or an existing user who hasn't logged in yet, use browser cookies to help identify users even when they are logged out, and tie the user session to a user account for use making recommendation.
-    geo-ip: identify user with IP address they are connecting from, many IP addresses can be translated into geographical locations. Then recommend based on other people from the same region or popular items from this region.
-    recommend top-sellers or promotions: a safer bet is recommend top-selling items or promotions when you have nothing else to work with.
-    interview the user: ask user's interests to get some information to work with on personal interests.
+    +use implicit data: a new user's interests can be indicated as soon as they looks at an item on your site, you'll have at least some implicit information about this user's interests.
+    +use cookies (carefully): a new user or an existing user who hasn't logged in yet, use browser cookies to help identify users even when they are logged out, and tie the user session to a user account for use making recommendation.
+    +geo-ip: identify user with IP address they are connecting from, many IP addresses can be translated into geographical locations. Then recommend based on other people from the same region or popular items from this region.
+    +recommend top-sellers or promotions: a safer bet is recommend top-selling items or promotions when you have nothing else to work with.
+    +interview the user: ask user's interests to get some information to work with on personal interests.
     
 Cold-Start: new item solutions:
     
-    just don't worry about it: it can be discovered in search results, or appear in promotions
-    use content-based attributes: recommend it alongside items that have similar attributes.
-    map attributes to latent features: merge content attributes with latent features learned rating behavior pattern through matrix factorization, or deep learning. (see paper called LearnAROMA)
-    random exploration: dedicate extra slots in top-N recommendations to randomly showing new items to users, in an attempt to gather more data on them.
+    +just don't worry about it: it can be discovered in search results, or appear in promotions
+    +use content-based attributes: recommend it alongside items that have similar attributes.
+    +map attributes to latent features: merge content attributes with latent features learned rating behavior pattern through matrix factorization, or deep learning. (see paper called LearnAROMA)
+    +random exploration: dedicate extra slots in top-N recommendations to randomly showing new items to users, in an attempt to gather more data on them.
 
 
