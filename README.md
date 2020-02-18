@@ -227,7 +227,7 @@ Unfortunately, the ouput isn't terribly interesting because it would be hard to 
 #### 5.1 The Cold Start Problem
 The Cold Start Problem is as when a brand-new user arrives at your site, what do you recommend to them when you know nothing about them yet? The same for new items in your catalog, how do they get recommended when there is no data on them yet to pair with other items?
 
-Cold-Start: new user solutions:
+Cold-Start: new user solutions
 
     +use implicit data: a new user's interests can be indicated as soon as they looks at an item on your site, you'll have at least some implicit information about this user's interests.
     +use cookies (carefully): a new user or an existing user who hasn't logged in yet, use browser cookies to help identify users even when they are logged out, and tie the user session to a user account for use making recommendation.
@@ -235,11 +235,32 @@ Cold-Start: new user solutions:
     +recommend top-sellers or promotions: a safer bet is recommend top-selling items or promotions when you have nothing else to work with.
     +interview the user: ask user's interests to get some information to work with on personal interests.
     
-Cold-Start: new item solutions:
+Cold-Start: new item solutions
     
     +just don't worry about it: it can be discovered in search results, or appear in promotions
     +use content-based attributes: recommend it alongside items that have similar attributes.
     +map attributes to latent features: merge content attributes with latent features learned rating behavior pattern through matrix factorization, or deep learning. (see paper called LearnAROMA)
     +random exploration: dedicate extra slots in top-N recommendations to randomly showing new items to users, in an attempt to gather more data on them.
+    
+#### 5.2 Stoplists
+Stoplists is checking to see if an item might cause unwanted controversy before you let it into your recommender system.
+
+Things you might stoplist
+
+    adult-oriented content
+    vulgarity
+    legally prohibited topics (i.e. Mein Kampf)
+    terrorism / political extremism
+    bereavement / medical
+    competing products
+    drug use
+    religion
+    
+Stoplists should be updated and applied quickly should the need arise.
+
+#### 5.3 Filter Bubbles Trust and Outliers
+Filter Bubbles refers to societal problems that arise when all you show people are things that appeal to their existing interests. This is called a filter bubble because the content you're presenting your users is filtered in such a way that it keeps them within a bubble of their pre-existing interests. Transparency, allow the user to see exactly why you recommended this item to them, and ideally, let them fix the root cause themselves. It's a much better outcome if a user understands why you recommended something that they found confusing.
+
+Outliers, some users in your data aren't actually real people, but are bots that are rating things in an unnatural manner. A bot might also generate an exessively large number of ratings, and end up having a very large influence on you collaborative filtering recommendations. Even among real peopel, you might want to filter some of them out, i.e. professional reviewers, institutional buyers, who can have a huge influence on your recommendations.
 
 
