@@ -222,5 +222,24 @@ represents the processing of a single event in the clickstream. We start with th
 
 Unfortunately, the ouput isn't terribly interesting because it would be hard to subjectively evaluate the results given that we are using a dataset that wasn't really intended for this to begin with. More information on ICLR'2016 paper "Session-based Recommendations With Recurrent Neural Networks". See paper: http://arxiv.org/abs/1511.06939.
 
+##
+## 5. Real-World Challenges of Recommender Systems
+#### 5.1 The Cold Start Problem
+The Cold Start Problem is as when a brand-new user arrives at your site, what do you recommend to them when you know nothing about them yet? The same for new items in your catalog, how do they get recommended when there is no data on them yet to pair with other items?
+
+Cold-Start: new user solutions:
+
+    use implicit data: a new user's interests can be indicated as soon as they looks at an item on your site, you'll have at least some implicit information about this user's interests.
+    use cookies (carefully): a new user or an existing user who hasn't logged in yet, use browser cookies to help identify users even when they are logged out, and tie the user session to a user account for use making recommendation.
+    geo-ip: identify user with IP address they are connecting from, many IP addresses can be translated into geographical locations. Then recommend based on other people from the same region or popular items from this region.
+    recommend top-sellers or promotions: a safer bet is recommend top-selling items or promotions when you have nothing else to work with.
+    interview the user: ask user's interests to get some information to work with on personal interests.
+    
+Cold-Start: new item solutions:
+    
+    just don't worry about it: it can be discovered in search results, or appear in promotions
+    use content-based attributes: recommend it alongside items that have similar attributes.
+    map attributes to latent features: merge content attributes with latent features learned rating behavior pattern through matrix factorization, or deep learning. (see paper called LearnAROMA)
+    random exploration: dedicate extra slots in top-N recommendations to randomly showing new items to users, in an attempt to gather more data on them.
 
 
