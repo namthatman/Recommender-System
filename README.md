@@ -1,4 +1,4 @@
-Following the Udemy course, "Building Recommender Systems with Machine Learning and AI", by Sundog Education by Frank Kane, Frank Kane
+CREDIT: Udemy course, "Building Recommender Systems with Machine Learning and AI", by Sundog Education by Frank Kane, Frank Kane
 
 # Recommender System
 ## 0. Recommender Engine Framework
